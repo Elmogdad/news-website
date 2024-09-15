@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>لوحة تحكم الصحيفة</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- الهيدر -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">لوحة تحكم الصحيفة</div>
+            <nav class="flex space-x-4">
+                <a href="#" class="hover:text-blue-500">الرئيسية</a>
+                <a href="#" class="hover:text-blue-500">إعدادات</a>
+                <a href="#" class="hover:text-blue-500">تسجيل الخروج</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- المحتوى -->
+    <main class="container mx-auto p-4 my-8">
+        <div class="flex">
+            <!-- الشريط الجانبي -->
+            <aside class="bg-white p-4 rounded shadow w-1/4">
+                <h2 class="text-xl font-bold mb-4">القائمة</h2>
+                <ul class="space-y-2">
+                    <li><a href="#articles" class="block p-2 hover:bg-gray-200 rounded">إدارة المقالات</a></li>
+                    <li><a href="#users" class="block p-2 hover:bg-gray-200 rounded">إدارة المستخدمين</a></li>
+                    <li><a href="#writers" class="block p-2 hover:bg-gray-200 rounded">إدارة الكتّاب</a></li>
+                    <li><a href="#" class="block p-2 hover:bg-gray-200 rounded">إعدادات الموقع</a></li>
+                    <li><a href="#" class="block p-2 hover:bg-gray-200 rounded">تقارير</a></li>
+                </ul>
+            </aside>
+
+            <!-- المحتوى الرئيسي -->
+            <div class="w-3/4 p-4">
+                <!-- قسم إدارة المقالات -->
+                <section id="articles" class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">إدارة المقالات</h2>
+                    <button id="addArticleBtn" class="bg-blue-500 text-white p-2 rounded mb-4">إضافة مقال جديد</button>
+                    <div id="articleForm" class="hidden bg-white p-4 rounded shadow mb-4">
+                        <h3 class="text-xl font-bold mb-2">نموذج إضافة مقال</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="article-title" class="block text-gray-700">عنوان المقال</label>
+                                <input type="text" id="article-title" class="w-full p-2 border border-gray-300 rounded" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="article-content" class="block text-gray-700">محتوى المقال</label>
+                                <textarea id="article-content" class="w-full p-2 border border-gray-300 rounded" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-green-500 text-white p-2 rounded">إرسال المقال</button>
+                        </form>
+                    </div>
+                    <table class="min-w-full bg-white border border-gray-300">
+                        <thead>
+                            <tr>
+                                <th class="border px-4 py-2">عنوان المقال</th>
+                                <th class="border px-4 py-2">الكاتب</th>
+                                <th class="border px-4 py-2">تاريخ النشر</th>
+                                <th class="border px-4 py-2">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2">عنوان المقال 1</td>
+                                <td class="border px-4 py-2">الكاتب 1</td>
+                                <td class="border px-4 py-2">01/01/2024</td>
+                                <td class="border px-4 py-2">
+                                    <button class="bg-yellow-500 text-white p-1 rounded">تعديل</button>
+                                    <button class="bg-red-500 text-white p-1 rounded">حذف</button>
+                                </td>
+                            </tr>
+                            <!-- المزيد من المقالات هنا -->
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- قسم إدارة المستخدمين -->
+                <section id="users" class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">إدارة المستخدمين</h2>
+                    <button id="addUserBtn" class="bg-blue-500 text-white p-2 rounded mb-4">إضافة مستخدم جديد</button>
+                    <div id="userForm" class="hidden bg-white p-4 rounded shadow mb-4">
+                        <h3 class="text-xl font-bold mb-2">نموذج إضافة مستخدم</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="user-name" class="block text-gray-700">اسم المستخدم</label>
+                                <input type="text" id="user-name" class="w-full p-2 border border-gray-300 rounded" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="user-email" class="block text-gray-700">البريد الإلكتروني</label>
+                                <input type="email" id="user-email" class="w-full p-2 border border-gray-300 rounded" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="user-role" class="block text-gray-700">الدور</label>
+                                <select id="user-role" class="w-full p-2 border border-gray-300 rounded">
+                                    <option value="كاتب">كاتب</option>
+                                    <option value="محرر">محرر</option>
+                                    <option value="مشرف">مشرف</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="bg-green-500 text-white p-2 rounded">إرسال المستخدم</button>
+                        </form>
+                    </div>
+                    <table class="min-w-full bg-white border border-gray-300">
+                        <thead>
+                            <tr>
+                                <th class="border px-4 py-2">اسم المستخدم</th>
+                                <th class="border px-4 py-2">البريد الإلكتروني</th>
+                                <th class="border px-4 py-2">الدور</th>
+                                <th class="border px-4 py-2">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2">مستخدم 1</td>
+                                <td class="border px-4 py-2">user1@example.com</td>
+                                <td class="border px-4 py-2">كاتب</td>
+                                <td class="border px-4 py-2">
+                                    <button class="bg-yellow-500 text-white p-1 rounded">تعديل</button>
+                                    <button class="bg-red-500 text-white p-1 rounded">حذف</button>
+                                </td>
+                            </tr>
+                            <!-- المزيد من المستخدمين هنا -->
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- قسم إدارة الكتّاب -->
+                <section id="writers" class="mb-8">
+                    <h2 class="text-2xl font-bold mb-4">إدارة الكتّاب</h2>
+                    <button id="addWriterBtn" class="bg-blue-500 text-white p-2 rounded mb-4">إضافة كاتب جديد</button>
+                    <div id="writerForm" class="hidden bg-white p-4 rounded shadow mb-4">
+                        <h3 class="text-xl font-bold mb-2">نموذج إضافة كاتب</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="writer-name" class="block text-gray-700">اسم الكاتب</label>
+                                <input type="text" id="writer-name" class="w-full p-2 border border-gray-300 rounded" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="writer-bio" class="block text-gray-700">سيرة الكاتب</label>
+                                <textarea id="writer-bio" class="w-full p-2 border border-gray-300 rounded" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-green-500 text-white p-2 rounded">إرسال الكاتب</button>
+                        </form>
+                    </div>
+                    <table class="min-w-full bg-white border border-gray-300">
+                        <thead>
+                            <tr>
+                                <th class="border px-4 py-2">اسم الكاتب</th>
+                                <th class="border px-4 py-2">السيرة</th>
+                                <th class="border px-4 py-2">الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border px-4 py-2">كاتب 1</td>
+                                <td class="border px-4 py-2">سيرة الكاتب 1</td>
+                                <td class="border px-4 py-2">
+                                    <button class="bg-yellow-500 text-white p-1 rounded">تعديل</button>
+                                    <button class="bg-red-500 text-white p-1 rounded">حذف</button>
+                                </td>
+                            </tr>
+                            <!-- المزيد من الكتّاب هنا -->
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>حقوق النشر &copy; 2024. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript لإظهار/إخفاء نماذج الإدخال
+        document.getElementById('addArticleBtn').onclick = function() {
+            document.getElementById('articleForm').classList.toggle('hidden');
+        };
+        document.getElementById('addUserBtn').onclick = function() {
+            document.getElementById('userForm').classList.toggle('hidden');
+        };
+        document.getElementById('addWriterBtn').onclick = function() {
+            document.getElementById('writerForm').classList.toggle('hidden');
+        };
+    </script>
+</body>
+</html>

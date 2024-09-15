@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>صفحة التسجيل والدخول</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- الهيدر -->
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">شعار الموقع</div>
+            <nav class="flex space-x-4">
+                <a href="#" class="hover:text-blue-500">الرئيسية</a>
+                <a href="#" class="hover:text-blue-500">أخبار</a>
+                <a href="#" class="hover:text-blue-500">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- صفحة التسجيل والدخول -->
+    <main class="container mx-auto p-4 my-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- قسم التسجيل -->
+            <div class="bg-white p-6 rounded shadow">
+                <h2 class="text-2xl font-bold mb-4">إنشاء حساب جديد</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="register-name" class="block text-gray-700">الاسم الكامل</label>
+                        <input type="text" id="register-name" class="w-full p-2 border border-gray-300 rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="register-email" class="block text-gray-700">البريد الإلكتروني</label>
+                        <input type="email" id="register-email" class="w-full p-2 border border-gray-300 rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="register-password" class="block text-gray-700">كلمة المرور</label>
+                        <input type="password" id="register-password" class="w-full p-2 border border-gray-300 rounded" required>
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white p-2 rounded">تسجيل</button>
+                </form>
+            </div>
+
+            <!-- قسم الدخول -->
+            <div class="bg-white p-6 rounded shadow">
+                <h2 class="text-2xl font-bold mb-4">تسجيل الدخول</h2>
+                <form>
+                    <div class="mb-4">
+                        <label for="login-email" class="block text-gray-700">البريد الإلكتروني</label>
+                        <input type="email" id="login-email" class="w-full p-2 border border-gray-300 rounded" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="login-password" class="block text-gray-700">كلمة المرور</label>
+                        <input type="password" id="login-password" class="w-full p-2 border border-gray-300 rounded" required>
+                    </div>
+                    <button type="submit" class="bg-blue-500 text-white p-2 rounded">دخول</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <p>حقوق النشر &copy; 2024. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        // يمكنك إضافة أي كود JavaScript هنا
+    </script>
+</body>
+</html>

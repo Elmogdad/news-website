@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>موقع إخباري عالمي</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- الهيدر -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">شعار الموقع</div>
+            <nav class="flex space-x-4">
+                <a href="#" class="hover:text-blue-500"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="#" class="hover:text-blue-500"><i class="fas fa-globe"></i> سياسية</a>
+                <a href="#" class="hover:text-blue-500"><i class="fas fa-futbol"></i> رياضية</a>
+                <a href="#" class="hover:text-blue-500"><i class="fas fa-dollar-sign"></i> اقتصادية</a>
+            </nav>
+            <input type="text" placeholder="بحث..." class="p-2 border border-gray-300 rounded">
+        </div>
+    </header>
+
+    <!-- أقسام الأخبار الرئيسية -->
+    <main class="container mx-auto p-4">
+        <section class="my-4">
+            <h2 class="text-2xl font-bold mb-2">أهم الأخبار</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="bg-white p-4 rounded shadow hover:shadow-lg transition-shadow">
+                    <img src="image1.jpg" alt="خبر 1" class="w-full h-32 object-cover rounded">
+                    <h3 class="font-semibold mt-2">عنوان الخبر 1</h3>
+                    <p class="text-gray-600">ملخص الخبر 1...</p>
+                </article>
+                <article class="bg-white p-4 rounded shadow hover:shadow-lg transition-shadow">
+                    <img src="image2.jpg" alt="خبر 2" class="w-full h-32 object-cover rounded">
+                    <h3 class="font-semibold mt-2">عنوان الخبر 2</h3>
+                    <p class="text-gray-600">ملخص الخبر 2...</p>
+                </article>
+                <article class="bg-white p-4 rounded shadow hover:shadow-lg transition-shadow">
+                    <img src="image3.jpg" alt="خبر 3" class="w-full h-32 object-cover rounded">
+                    <h3 class="font-semibold mt-2">عنوان الخبر 3</h3>
+                    <p class="text-gray-600">ملخص الخبر 3...</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- أخبار عاجلة -->
+        <section class="my-4">
+            <h2 class="text-2xl font-bold mb-2">أخبار عاجلة</h2>
+            <div class="bg-yellow-200 p-4 rounded">
+                <marquee behavior="scroll" direction="left">
+                    <span class="text-lg">خبر عاجل 1 | خبر عاجل 2 | خبر عاجل 3</span>
+                </marquee>
+            </div>
+        </section>
+
+        <!-- قسم الفيديو -->
+        <section class="my-4">
+            <h2 class="text-2xl font-bold mb-2">فيديوهات إخبارية</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-4 rounded shadow">
+                    <video class="w-full" controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <video class="w-full" controls>
+                        <source src="video2.mp4" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- مقالات الرأي -->
+        <section class="my-4">
+            <h2 class="text-2xl font-bold mb-2">مقالات الرأي</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="bg-white p-4 rounded shadow hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold">عنوان المقال 1</h3>
+                    <p class="text-gray-600">محتوى المقال 1...</p>
+                </article>
+                <article class="bg-white p-4 rounded shadow hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold">عنوان المقال 2</h3>
+                    <p class="text-gray-600">محتوى المقال 2...</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- المقالات الأكثر قراءة -->
+        <section class="my-4">
+            <h2 class="text-2xl font-bold mb-2">المقالات الأكثر قراءة</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <article class="bg-white p-4 rounded shadow hover:shadow-lg transition-shadow">
+                    <h3 class="font-semibold">عنوان المقال الأكثر قراءة 1</h3>
+                    <p class="text-gray-600">محتوى المقال الأكثر قراءة 1...</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- التذييل -->
+    <footer class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-4 mb-2">
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-blue-400"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>اتفاقية الاستخدام | سياسة الخصوصية | معلومات الاتصال | سياسات الموقع</p>
+        </div>
+    </footer>
+
+    <script>
+        // يمكنك إضافة أي كود JavaScript هنا
+    </script>
+</body>
+</html>
